@@ -1,0 +1,165 @@
+//1. Python
+
+from enum import Enum
+
+class Color(Enum):
+    BLANCO = 0
+    AZUL = 1
+    VERDE = 2
+    ROJO = 3
+
+rotulador = Color.ROJO
+print("\nEl color es", rotulador)
+
+x = int(input("Introduzca un valor: "))
+rotulador = Color(x)
+
+if rotulador == Color.ROJO:
+    print("El rotulador es rojo")
+elif rotulador == Color.VERDE:
+    print("El rotulador es verde")
+elif rotulador == Color.AZUL:
+    print("El rotulador es azul")
+elif rotulador == Color.BLANCO:
+    print("El rotulador es blanco")
+else:
+    print("El color es indefinido")
+
+//2. JavaScript
+
+const Color = {
+    BLANCO: 0,
+    AZUL: 1,
+    VERDE: 2,
+    ROJO: 3
+};
+
+let rotulador = Color.ROJO;
+console.log("\nEl color es", rotulador);
+
+let x = parseInt(prompt("Introduzca un valor: "));
+rotulador = x;
+
+switch (rotulador) {
+    case Color.ROJO:
+        console.log("El rotulador es rojo");
+        break;
+    case Color.VERDE:
+        console.log("El rotulador es verde");
+        break;
+    case Color.AZUL:
+        console.log("El rotulador es azul");
+        break;
+    case Color.BLANCO:
+        console.log("El rotulador es blanco");
+        break;
+    default:
+        console.log("El color es indefinido");
+}
+
+//3. Java
+
+import java.util.Scanner;
+
+public class Main {
+    enum Color {
+        BLANCO, AZUL, VERDE, ROJO
+    }
+
+    public static void main(String[] args) {
+        Color rotulador = Color.ROJO;
+        System.out.println("\nEl color es " + rotulador);
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Introduzca un valor: ");
+        int x = scanner.nextInt();
+        rotulador = Color.values()[x];
+
+        switch (rotulador) {
+            case ROJO:
+                System.out.println("El rotulador es rojo");
+                break;
+            case VERDE:
+                System.out.println("El rotulador es verde");
+                break;
+            case AZUL:
+                System.out.println("El rotulador es azul");
+                break;
+            case BLANCO:
+                System.out.println("El rotulador es blanco");
+                break;
+            default:
+                System.out.println("El color es indefinido");
+        }
+    }
+}
+
+//4. C#
+
+using System;
+
+class Program
+{
+    enum Color
+    {
+        BLANCO, AZUL, VERDE, ROJO
+    }
+
+    static void Main()
+    {
+        Color rotulador = Color.ROJO;
+        Console.WriteLine("\nEl color es " + rotulador);
+
+        Console.Write("Introduzca un valor: ");
+        int x = Convert.ToInt32(Console.ReadLine());
+        rotulador = (Color)x;
+
+        switch (rotulador)
+        {
+            case Color.ROJO:
+                Console.WriteLine("El rotulador es rojo");
+                break;
+            case Color.VERDE:
+                Console.WriteLine("El rotulador es verde");
+                break;
+            case Color.AZUL:
+                Console.WriteLine("El rotulador es azul");
+                break;
+            case Color.BLANCO:
+                Console.WriteLine("El rotulador es blanco");
+                break;
+            default:
+                Console.WriteLine("El color es indefinido");
+                break;
+        }
+    }
+}
+
+//5. Ruby
+
+class Color
+    BLANCO = 0
+    AZUL = 1
+    VERDE = 2
+    ROJO = 3
+end
+
+rotulador = Color::ROJO
+puts "\nEl color es #{rotulador}"
+
+print "Introduzca un valor: "
+x = gets.chomp.to_i
+rotulador = x
+
+case rotulador
+when Color::ROJO
+    puts "El rotulador es rojo"
+when Color::VERDE
+    puts "El rotulador es verde"
+when Color::AZUL
+    puts "El rotulador es azul"
+when Color::BLANCO
+    puts "El rotulador es blanco"
+else
+    puts "El color es indefinido"
+end
