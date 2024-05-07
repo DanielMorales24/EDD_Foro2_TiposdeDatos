@@ -1,0 +1,157 @@
+//1. Python
+
+LONG = 100
+
+def leerArray():
+    a = []
+    n = 0
+    print("Introduzca datos. Para terminar, pulse 0:")
+    for n in range(LONG):
+        print(n, ": ", end="")
+        num = float(input())
+        if num == 0:
+            break
+        a.append(num)
+    return a
+
+def imprimirArray(a):
+    print("El array tiene", len(a), "elementos\nson:")
+    for i, num in enumerate(a):
+        print("\t", i, ":", num)
+
+a = leerArray()
+imprimirArray(a)
+
+//2. JavaScript
+
+const LONG = 100;
+
+function leerArray() {
+    let a = [];
+    console.log("Introduzca datos. Para terminar, pulse 0:");
+    for (let n = 0; n < LONG; n++) {
+        process.stdout.write(n + ": ");
+        let num = parseFloat(require('readline-sync').question());
+        if (num === 0) {
+            break;
+        }
+        a.push(num);
+    }
+    return a;
+}
+
+function imprimirArray(a) {
+    console.log("El array tiene", a.length, "elementos\nson:");
+    for (let i = 0; i < a.length; i++) {
+        console.log("\t", i, ":", a[i]);
+    }
+}
+
+let a = leerArray();
+imprimirArray(a);
+
+//3. Java
+
+import java.util.Scanner;
+
+public class Main {
+    public static final int LONG = 100;
+
+    public static void main(String[] args) {
+        double[] a = leerArray();
+        System.out.println("El array tiene " + a.length + " elementos\nson:");
+        imprimirArray(a);
+    }
+
+    public static double[] leerArray() {
+        double[] a = new double[LONG];
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Introduzca datos. Para terminar, pulse 0:");
+        int n;
+        for (n = 0; n < LONG; n++) {
+            System.out.print(n + ": ");
+            double num = scanner.nextDouble();
+            if (num == 0) {
+                break;
+            }
+            a[n] = num;
+        }
+        double[] newArray = new double[n];
+        System.arraycopy(a, 0, newArray, 0, n);
+        return newArray;
+    }
+
+    public static void imprimirArray(double[] a) {
+        for (int i = 0; i < a.length; i++) {
+            System.out.println("\t" + i + ": " + a[i]);
+        }
+    }
+}
+
+//4. C#
+
+using System;
+
+class Program
+{
+    const int LONG = 100;
+
+    static void Main()
+    {
+        double[] a = LeerArray();
+        Console.WriteLine("El array tiene " + a.Length + " elementos\nson:");
+        ImprimirArray(a);
+    }
+
+    static double[] LeerArray()
+    {
+        double[] a = new double[LONG];
+        Console.WriteLine("Introduzca datos. Para terminar, pulse 0:");
+        int n;
+        for (n = 0; n < LONG; n++)
+        {
+            Console.Write(n + ": ");
+            double num = Convert.ToDouble(Console.ReadLine());
+            if (num == 0)
+            {
+                break;
+            }
+            a[n] = num;
+        }
+        double[] newArray = new double[n];
+        Array.Copy(a, 0, newArray, 0, n);
+        return newArray;
+    }
+
+    static void ImprimirArray(double[] a)
+    {
+        for (int i = 0; i < a.Length; i++)
+        {
+            Console.WriteLine("\t" + i + ": " + a[i]);
+        }
+    }
+}
+
+//5. Ruby
+
+LONG = 100
+
+def leerArray()
+    a = []
+    puts "Introduzca datos. Para terminar, pulse 0:"
+    LONG.times do |n|
+        print "#{n}: "
+        num = gets.chomp.to_f
+        break if num == 0
+        a << num
+    end
+    a
+end
+
+def imprimirArray(a)
+    puts "El array tiene #{a.length} elementos\nson:"
+    a.each_with_index { |num, i| puts "\t#{i}: #{num}" }
+end
+
+a = leerArray()
+imprimirArray(a)
