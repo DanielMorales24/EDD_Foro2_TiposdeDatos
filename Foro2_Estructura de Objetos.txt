@@ -1,0 +1,117 @@
+//1. Python
+
+class Empleado:
+    def __init__(self, id, nombre, apellido, salario, edad):
+        self.id = id
+        self.nombre = nombre
+        self.apellido = apellido
+        self.salario = salario
+        self.edad = edad
+
+empleado = Empleado(1, "John", "Doe", 3000.0, 30)
+print("ID:", empleado.id)
+print("Nombre:", empleado.nombre)
+print("Apellido:", empleado.apellido)
+print("Salario:", empleado.salario)
+print("Edad:", empleado.edad)
+
+//2. JavaScript
+
+class Empleado {
+    constructor(id, nombre, apellido, salario, edad) {
+        this.id = id;
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.salario = salario;
+        this.edad = edad;
+    }
+}
+
+let empleado = new Empleado(1, "John", "Doe", 3000.0, 30);
+console.log("ID:", empleado.id);
+console.log("Nombre:", empleado.nombre);
+console.log("Apellido:", empleado.apellido);
+console.log("Salario:", empleado.salario);
+console.log("Edad:", empleado.edad);
+
+//3. Java
+
+class Empleado {
+    public int id;
+    public String nombre;
+    public String apellido;
+    public float salario;
+    public int edad;
+
+    public Empleado(int id, String nombre, String apellido, float salario, int edad) {
+        this.id = id;
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.salario = salario;
+        this.edad = edad;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Empleado empleado = new Empleado(1, "John", "Doe", 3000.0f, 30);
+        System.out.println("ID: " + empleado.id);
+        System.out.println("Nombre: " + empleado.nombre);
+        System.out.println("Apellido: " + empleado.apellido);
+        System.out.println("Salario: " + empleado.salario);
+        System.out.println("Edad: " + empleado.edad);
+    }
+}
+
+//4. C#
+
+using System;
+
+struct Empleado
+{
+    public uint id;
+    public string nombre;
+    public string apellido;
+    public float salario;
+    public int edad;
+}
+
+class Program
+{
+    static void Main()
+    {
+        Empleado empleado;
+        empleado.id = 1;
+        empleado.nombre = "John";
+        empleado.apellido = "Doe";
+        empleado.salario = 3000.0f;
+        empleado.edad = 30;
+
+        Console.WriteLine("ID: " + empleado.id);
+        Console.WriteLine("Nombre: " + empleado.nombre);
+        Console.WriteLine("Apellido: " + empleado.apellido);
+        Console.WriteLine("Salario: " + empleado.salario);
+        Console.WriteLine("Edad: " + empleado.edad);
+    }
+}
+
+//5. Ruby
+
+class Empleado
+    attr_accessor :id, :nombre, :apellido, :salario, :edad
+
+    def initialize(id, nombre, apellido, salario, edad)
+        @id = id
+        @nombre = nombre
+        @apellido = apellido
+        @salario = salario
+        @edad = edad
+    end
+end
+
+empleado = Empleado.new(1, "John", "Doe", 3000.0, 30)
+puts "ID: #{empleado.id}"
+puts "Nombre: #{empleado.nombre}"
+puts "Apellido: #{empleado.apellido}"
+puts "Salario: #{empleado.salario}"
+puts "Edad: #{empleado.edad}"
