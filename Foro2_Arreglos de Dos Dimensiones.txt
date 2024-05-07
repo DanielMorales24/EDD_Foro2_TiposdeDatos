@@ -1,0 +1,125 @@
+//1. Python
+
+N = 2
+M = 4
+discos = [[0 for _ in range(M)] for _ in range(N)]
+
+for fila in range(N):
+    for col in range(M):
+        discos[fila][col] = float(input("Por favor, introduzca el precio: "))
+
+# Visualizar la tabla
+for fila in range(N):
+    print("Precio fila", fila, ":", end=" ")
+    for col in range(M):
+        print(discos[fila][col], end=" ")
+    print()
+
+//2. JavaScript
+
+const N = 2;
+const M = 4;
+let discos = [];
+
+for (let fila = 0; fila < N; fila++) {
+    discos[fila] = [];
+    for (let col = 0; col < M; col++) {
+        discos[fila][col] = parseFloat(prompt("Por favor, introduzca el precio: "));
+    }
+}
+
+// Visualizar la tabla
+for (let fila = 0; fila < N; fila++) {
+    let filaStr = "Precio fila " + fila + ": ";
+    for (let col = 0; col < M; col++) {
+        filaStr += discos[fila][col] + " ";
+    }
+    console.log(filaStr);
+}
+
+//3. Java
+
+import java.util.Scanner;
+
+public class Main {
+    public static final int N = 2;
+    public static final int M = 4;
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        float[][] discos = new float[N][M];
+
+        for (int fila = 0; fila < N; fila++) {
+            for (int col = 0; col < M; col++) {
+                System.out.print("Por favor, introduzca el precio: ");
+                discos[fila][col] = scanner.nextFloat();
+            }
+        }
+
+        // Visualizar la tabla
+        for (int fila = 0; fila < N; fila++) {
+            System.out.print("Precio fila " + fila + ": ");
+            for (int col = 0; col < M; col++) {
+                System.out.print(discos[fila][col] + " ");
+            }
+            System.out.println();
+        }
+    }
+}
+
+//4. C#
+
+using System;
+
+class Program
+{
+    const int N = 2;
+    const int M = 4;
+
+    static void Main()
+    {
+        float[,] discos = new float[N, M];
+
+        for (int fila = 0; fila < N; fila++)
+        {
+            for (int col = 0; col < M; col++)
+            {
+                Console.Write("Por favor, introduzca el precio: ");
+                discos[fila, col] = Convert.ToSingle(Console.ReadLine());
+            }
+        }
+
+        // Visualizar la tabla
+        for (int fila = 0; fila < N; fila++)
+        {
+            Console.Write("Precio fila " + fila + ": ");
+            for (int col = 0; col < M; col++)
+            {
+                Console.Write(discos[fila, col] + " ");
+            }
+            Console.WriteLine();
+        }
+    }
+}
+
+//5. Ruby
+
+N = 2
+M = 4
+discos = Array.new(N) { Array.new(M, 0) }
+
+(0...N).each do |fila|
+    (0...M).each do |col|
+        print "Por favor, introduzca el precio: "
+        discos[fila][col] = gets.chomp.to_f
+    end
+end
+
+# Visualizar la tabla
+(0...N).each do |fila|
+    print "Precio fila #{fila}: "
+    (0...M).each do |col|
+        print "#{discos[fila][col]} "
+    end
+    puts
+end
