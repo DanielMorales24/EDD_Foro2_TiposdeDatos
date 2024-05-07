@@ -1,0 +1,87 @@
+//1. Python
+
+NUM = 8
+nums = []
+total = 0
+
+for i in range(NUM):
+    num = int(input("Por favor, introduzca el número: "))
+    nums.append(num)
+    total += num
+
+print("El total de números es:", total)
+
+//2. JavaScript
+
+const NUM = 8;
+let nums = [];
+let total = 0;
+
+for (let i = 0; i < NUM; i++) {
+    let num = parseInt(prompt("Por favor, introduzca el número: "));
+    nums.push(num);
+    total += num;
+}
+
+console.log("El total de números es:", total);
+
+//3. JAVA
+
+import java.util.Scanner;
+
+public class Main {
+    public static final int NUM = 8;
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int[] nums = new int[NUM];
+        int total = 0;
+
+        for (int i = 0; i < NUM; i++) {
+            System.out.print("Por favor, introduzca el número: ");
+            nums[i] = scanner.nextInt();
+            total += nums[i];
+        }
+
+        System.out.println("El total de números es: " + total);
+    }
+}
+
+//4. C Sharp
+
+using System;
+
+class Program
+{
+    const int NUM = 8;
+
+    static void Main()
+    {
+        int[] nums = new int[NUM];
+        int total = 0;
+
+        for (int i = 0; i < NUM; i++)
+        {
+            Console.Write("Por favor, introduzca el número: ");
+            nums[i] = Convert.ToInt32(Console.ReadLine());
+            total += nums[i];
+        }
+
+        Console.WriteLine("El total de números es: " + total);
+    }
+}
+
+//5. Ruby
+
+NUM = 8
+nums = []
+total = 0
+
+NUM.times do |i|
+    print "Por favor, introduzca el número: "
+    nums << gets.chomp.to_i
+    total += nums[i]
+end
+
+puts "El total de números es: #{total}"
+
